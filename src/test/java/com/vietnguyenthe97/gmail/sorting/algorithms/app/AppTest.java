@@ -1,4 +1,4 @@
-package com.vietnguyenthe97.gmail.sorting_algorithms_app;
+package com.vietnguyenthe97.gmail.sorting.algorithms.app;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
