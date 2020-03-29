@@ -3,7 +3,7 @@ package com.vietnguyenthe97.gmail.app.algorithms.search;
 import java.util.List;
 
 public class BinarySearch {
-	public static int binarySearch(List<Integer> list, int firstIndex, int lastIndex, int findingValue) {
+	public static int search(List<Integer> list, int firstIndex, int lastIndex, int findingValue) {
 		if (lastIndex < firstIndex) {
 			return -1;
 		} else {
@@ -12,15 +12,15 @@ public class BinarySearch {
 				return middleIndex;
 			} else {
 				if (list.get(middleIndex) < findingValue) {
-					return binarySearch(list, middleIndex + 1, lastIndex, findingValue);
+					return search(list, middleIndex + 1, lastIndex, findingValue);
 				} else {
-					return binarySearch(list, firstIndex, middleIndex - 1, findingValue);
+					return search(list, firstIndex, middleIndex - 1, findingValue);
 				}
 			}
 		}
 	}
 	
-	public static int binarySearchIterative(List<Integer> list, int firstIndex, int lastIndex, int findingValue) {
+	public static int searchIteratively(List<Integer> list, int firstIndex, int lastIndex, int findingValue) {
 		int foundIndex = -1;
 		while (lastIndex >= firstIndex) {
 			int middleIndex = firstIndex + (lastIndex - firstIndex)/2;
